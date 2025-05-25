@@ -37,12 +37,13 @@ elif (operation == "-"):
     print("Результат: " + str(number_5 - number_6))
 elif (operation == "*"):
     print("Результат: " + str(number_5 * number_6))
-elif (operation == "/" and number_6 != 0):
-    print("Результат: " + str(number_5 / number_6))
-elif (operation == "/" and number_6 == 0):
-    print("Ошибка! Делить на ноль нельзя!")
+elif (operation == "/"):
+    if (number_6 == 0):
+        print("Ошибка! На ноль делить нельзя!")
+    else:
+        print("Результат: " + str(number_5 / number_6))
 else:
-    pass
+    print("Некорректная операция!")
 
 # 5
 year = int(input("Введите год: "))
@@ -62,7 +63,7 @@ elif (17 >= time >= 12):
 elif (18 >= time >= 23):
     print("Сейчас вечер")
 else:
-    pass
+    print("Некорректное время!")
 
 # 7
 password = input("Введите пароль: ")
@@ -70,7 +71,7 @@ password = input("Введите пароль: ")
 if (password == "secret12345"):
     print("Доступ разрешён")
 else:
-    print("Доступ разрешён")
+    print("Доступ запрещён")
 
 # 8
 
@@ -89,18 +90,19 @@ else:
 figure = input("Введите фигуру: ")
 
 if (figure == "круг"):
-    rad = int(input("Введите радиус круга: "))
-    square = print("Площадь круга равна: " + str(3.14 * rad ** 2))
+    rad = float(input("Введите радиус круга: "))
+    print("Площадь круга равна: " + str(round(3.14 * rad ** 2), 2))
 elif (figure == "прямоугольник"):
-    weight = int(input("Введите ширину прямоугольника: "))
-    height = int(input("Введите длину прямоугольника: "))
-    square = print("Площадь прямоугольника равна: " + str(weight * height))
+    weight = float(input("Введите ширину прямоугольника: "))
+    height = float(input("Введите длину прямоугольника: "))
+    print("Площадь прямоугольника равна: " + str(round(weight * height), 2))
 elif (figure == "треугольник"):
-    weight = int(input("Введите ширину треугольника: "))
-    height = int(input("Введите высоту треугольника: "))
-    square = print("Площадь треугольника равна: " + str(0.5 * weight * height))
+    weight = float(input("Введите ширину треугольника: "))
+    height = float(input("Введите высоту треугольника: "))
+    print("Площадь треугольника равна: " +
+          str(round(0.5 * weight * height), 2))
 else:
-    pass
+    print("Неизвестные фигура!")
 
 # 10
 
